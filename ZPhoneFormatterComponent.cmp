@@ -1,0 +1,13 @@
+<aura:component implements="flexipage:availableForAllPageTypes" >
+    <aura:handler event="c:ZPhoneFormatterLoadedEvent" action="{!c.formatPhoneNumber}"></aura:handler>
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"></aura:handler>
+    <aura:handler event="aura:doneRendering" action="{!c.doneRendering}"/>
+    
+    <aura:attribute name="phoneNumber" type="String" description="Phone Number to be formatted"/>
+    <aura:attribute name="country" type="String" description="Country for formatting the phone number"/>
+    <aura:attribute name="phoneService" type="String" description="Phone service to use. For e.g., Skype, Device, Hangout etc"/>
+    <aura:attribute access="private" name="phoneNumberToDisplay" type="String" description="Used for displaying the formatted phone number"/>
+	
+    <div aura:id="rootDiv"/>
+     
+</aura:component>
