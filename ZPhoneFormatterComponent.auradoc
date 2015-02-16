@@ -1,0 +1,44 @@
+<aura:documentation>
+	<aura:description>
+    	<p>
+        	This component can be used for displaying phone numbers in international format. 
+            Also, on click, calls can be placed using Skype.
+            This component takes the following input attributes:
+        </p>
+        <pre>
+            	phoneNumber: The phone number to be formatted
+            	country: The two digit country code (for e.g, US = United States, IN =India)
+            	phoneService: The phone service to be use for making the call. 
+                              Currently only Skype and device calls are implmented
+        </pre>
+        <p>
+            Formatting is done using the javascript library available at http://www.phoneformat.com/
+            Skype calls are made using URI schemes although at somepoint this may be changed to JS based
+            Planning to make this component extensible to add addtional services + override existing services
+            
+        </p>
+        <hr/>
+        <p>Provided below is an example of how to use this component in an application</p>
+        <pre>
+            &lt;aura:application&gt;
+              &lt;c:ZPhoneFormatterComponent 
+                  phoneNumber="(484) 555-5555"
+                  country="US"
+                  phoneService="Device"&gt;
+              &lt;/c:ZPhoneFormatterComponent&gt;
+            &lt;/aura:application&gt;
+        </pre>
+        <hr/>
+    
+    </aura:description>
+    <!--
+	<aura:example name="myComponentExample" ref="c:myComponentExample" label="Using this component">
+	   
+	</aura:example>
+   
+    <aura:attribute name="phoneNumber" type="String" description="The language locale used to format date value."/>
+    <aura:attribute name="country" type = "String"/>
+    <aura:attribute name="phoneService" type = "String"/>
+    <aura:attribute name="phoneNumberToDisplay" type = "String"/>
+-->
+</aura:documentation
