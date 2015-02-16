@@ -47,7 +47,6 @@
         var div = component.find("rootDiv").getElement();
         //Skype
         if(phoneService=='Skype'){
-            //I know this is big no no. Need to find a way of moving this to RenderAfter()
        		div.innerHTML = '<a href="' + 'skype:'+ phoneNumber+'?call">' + phoneNumberToDisplay + '</a>' ; 
         }
         //Hangout
